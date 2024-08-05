@@ -108,7 +108,7 @@
       width: 70%;
       max-width: 600px;
       margin-left: 50%;
-    
+
       text-align: left;
     }
   
@@ -151,3 +151,12 @@
     }
   }
   
+  @media (max-width: 768px) {
+      .textContainer{
+        margin-top: 13rem;
+      }
+
+      .dropdownlist{
+        text-align: right;
+      }
+  }

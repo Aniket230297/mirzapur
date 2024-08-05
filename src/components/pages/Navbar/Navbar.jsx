@@ -17,7 +17,7 @@ const Navbar = ()=>{
                     <li>Movies</li>
                     <li>Recently Added</li>
                 </ul>
-                <IoMenuOutline style={{color:'white'}} size={50} />
+                <IoMenuOutline style={{color:'white'}} size={50} className="dropdownlist" />
             </nav>
         </div>
         </>

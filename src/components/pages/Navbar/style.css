@@ -1,5 +1,4 @@
-
-.navbarComponent{
+.navbarComponent {
     /* border:1px solid red; */
 }
 
@@ -7,54 +6,162 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensure proper positioning for dropdowns */
 }
-ul{
+
+ul {
     width: 70%;
     display: flex;
-    gap:2rem;
+    gap: 2rem;
     /* border:1px solid green; */
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-li{
+li {
     color: white;
     list-style: none;
     font-size: 1.2rem;
+    position: relative; /* Ensure proper positioning for dropdowns */
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    top: 100%; /* Position the dropdown below the list item */
+    left: 0;
+    z-index: 1; /* Ensure the dropdown appears above other elements */
+}
+
+li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 0.5rem;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown li:hover {
+    background-color: #555;
 }
 
 @media (min-width: 768px) {
     ul {
-        gap: 3rem; 
-       
+        gap: 3rem;
     }
 
     li {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 }
 
 /* Styles for screens larger than 1024px */
 @media (min-width: 1024px) {
     ul {
-        width: 80%; 
-        gap: 4rem; 
+        width: 80%;
+        gap: 4rem;
     }
 
     li {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 }
 
-/* styles for screens smaller than 925px */
+/* Styles for screens smaller than 925px */
 @media (max-width: 925px) {
     ul {
         gap: 3rem; /* Increased gap for medium screens */
         display: none;
     }
 
-    .ioarrowback{
+    .ioarrowback {
         display: none;
     }
+
+    nav {
+        justify-content: flex-end; /* Align menu icon to the right */
+    }
+    
+    .dropdown {
+        display: block;
+        position: fixed;
+        top: 50px; /* Adjust based on your navbar height */
+        right: 0;
+        width: 200px; /* Adjust as needed */
+        height: calc(100vh - 50px); /* Full height minus navbar */
+        background-color: #333;
+        padding: 1rem;
+        z-index: 1;
+        overflow-y: auto;
+    }
+    
+    .dropdown li {
+        display: block;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .ioarrowback {
+        display: none;
+    }
+
+    .navbarComponent nav ul {
+        display: none;
+    }
+
+    .navbarComponent nav .dropdown {
+        display: block;
+    }
+
+    .dropdown {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #333;
+        padding: 1rem;
+        z-index: 1;
+        overflow-y: auto;
+    }
+
+    .navbarComponent nav .dropdown {
+        display: block;
+    }
+
+    .dropdown li {
+        display: block;
+        padding: 1rem 0;
+    }
+
+    .dropdown li:hover {
+        background-color: #555;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
+
+.show {
+    display: block !important;
 }
