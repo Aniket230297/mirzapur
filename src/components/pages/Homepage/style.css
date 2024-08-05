@@ -1,0 +1,153 @@
+.maincomponent {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/mirzapurr.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .textContainer {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    margin: 5% auto 0;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tagname {
+    font-size: 3rem;
+    color: #c12808;
+  }
+  
+  .seasonname {
+    font-size: 1.5rem;
+    color: #c12808;
+  }
+  
+  p {
+    color: #636363;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Button styling */
+  .buttoncomponent {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .resumebtn,
+  .mylistbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .resumebtn {
+    background-color: red;
+    color: white;
+  }
+  
+  .mylistbtn {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  /* Carousel Container */
+  .carouselContainer {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    position: relative;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background for better visibility */
+  }
+  
+  /* Custom carousel styles */
+  .carousel-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .videocontainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .legend {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: white;
+  }
+  
+  .custom-dot-list-style {
+    bottom: -20px;
+  }
+  
+  .carousel-item-padding-40-px {
+    padding: 0 20px;
+  }
+  
+  /* Styles for screens larger than 768px */
+  @media (min-width: 768px) {
+    .textContainer {
+      width: 70%;
+      max-width: 600px;
+      margin-left: 50%;
+    
+      text-align: left;
+    }
+  
+    .tagname {
+      font-size: 4rem;
+    }
+  
+    .seasonname {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    .buttoncomponent {
+      flex-direction: row;
+    }
+  }
+  
+  /* Styles for screens larger than 1024px */
+  @media (min-width: 1024px) {
+    .textContainer {
+      width: 50%;
+      max-width: 600px;
+      margin-left: 55%;
+      
+    }
+  
+    .tagname {
+      font-size: 6rem;
+    }
+  
+    .seasonname {
+      font-size: 3rem;
+    }
+  
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  
